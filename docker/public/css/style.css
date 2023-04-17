@@ -1,0 +1,108 @@
+body
+{
+    margin: 0;
+}
+
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #FCBF49 0%, #F77F00 100%) 0% 0% no-repeat padding-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo
+{
+    height: 60%;
+    width: 50%;
+    text-align: center;
+}
+
+login-container
+{
+    height: 40%;
+    width: 80%;
+    text-align: center;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 40vh;
+}
+
+.email
+{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    margin: 1em;
+    line-height: 3em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.password
+{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    margin: 1em;
+    line-height: 3em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.continue
+{
+    background: #D62828;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    margin: 1em;
+    line-height: 3em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1em;
+    letter-spacing: 0.6em;
+    text-align: center;
+}
+
+.register
+{
+    background: #888888;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    margin: 1em;
+    line-height: 3em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1em;
+    letter-spacing: 0.6em;
+    text-align: center;
+}
+
+@media only screen and (max-device-width: 420px)
+{
+    .
+    {
+    
+    }
+}
