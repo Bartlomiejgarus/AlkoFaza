@@ -1,50 +1,46 @@
-body
-{
+body {
     margin: 0;
 }
 
-.container
-{
+.container {
     width: 100vw;
     height: 100vh;
     background: transparent linear-gradient(180deg, #FCBF49 0%, #F77F00 100%) 0% 0% no-repeat padding-box;
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.logo
-{
-    height: 60%;
+.logo {
     width: 50%;
     text-align: center;
 }
 
-login-container
-{
-    height: 40%;
-    width: 80%;
-    text-align: center;
+.login-container {
+    width: 50%;
 }
 
-form
-{
+form.login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    width: 40vh;
+    width: 80%;
+    height: 40vh;
+    background: #FFFFFFE0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 33px;
 }
 
-.email
-{
-    background: #FFFFFF;
+button {
+    background: #888888;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    width: 100%;
+    width: 60%;
+    border: none;
+    color: black;
     margin: 1em;
     line-height: 3em;
     font-family: 'Inter';
@@ -54,12 +50,14 @@ form
     text-align: center;
 }
 
-.password
-{
-    background: #FFFFFF;
+input {
+    background-color: transparent;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    width: 100%;
+    width: 60%;
+    border: none;
+    color: black;
     margin: 1em;
     line-height: 3em;
     font-family: 'Inter';
@@ -67,42 +65,174 @@ form
     font-size: 1em;
     letter-spacing: 0.2em;
     text-align: center;
+}
+
+.email, .password
+{
+    background: #FFFFFF;
 }
 
 .continue
 {
     background: #D62828;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    width: 100%;
-    margin: 1em;
-    line-height: 3em;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 1em;
-    letter-spacing: 0.6em;
-    text-align: center;
 }
 
 .register
 {
     background: #888888;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    width: 100%;
-    margin: 1em;
-    line-height: 3em;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 1em;
-    letter-spacing: 0.6em;
-    text-align: center;
 }
 
-@media only screen and (max-device-width: 420px)
-{
-    .
-    {
-    
+@media only screen and (max-device-width: 420px) {
+    .container {
+        flex-direction: column;
+    }
+    * {
+        font-size: 36px;
+    }
+    .login-container,
+    .logo {
+        width: 100%;
+    }
+    form {
+        margin: auto;
+    }
+    img {
+        height: 7em;
+        margin: 2em;
     }
 }
+
+.base-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+nav {
+    width: 20vw;
+    height: 100%;
+    background: transparent linear-gradient(180deg, #80796d 0%, #7d766f 100%) 0% 0% no-repeat padding-box;
+}
+
+main {
+    width: 80vw;
+    background: transparent linear-gradient(180deg, #FCBF49 0%, #F77F00 100%) 0% 0% no-repeat padding-box;      
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav>img {
+    width: 60%;
+    margin: 2em auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+}
+
+li i {
+    font-size: 1.5em;   
+}
+
+.button {   
+    background: transparent linear-gradient(180deg, #FCBF49 0%, #F77F00 100%) 0% 0% no-repeat padding-box; 
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: black;
+    padding: 0.2rem;
+    width: 75%;
+}  
+
+
+.button-logout{
+    background: #D62828;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: black;
+    padding: 0.2rem;
+    width: 75%;
+}
+
+ul {
+    list-style-type: none;
+    font: normal normal normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    height: 100%;
+    width: calc(100% - 40px);
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    color: white;
+    margin-bottom: 1em;
+}
+
+li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    border-bottom: 1px solid gray;
+}
+
+.add {
+    background-color: #D62828;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: black;
+    padding: 0.2rem;
+    width: 20%;
+    margin: 0%;
+}
+
+.add>i {
+    padding: 1em 1em;
+}
+
+.search-bar {
+    width: 70%;
+}
+
+.search-bar>form>input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #A8A8A8;
+    margin: 0;
+    box-sizing: border-box;
+}   
