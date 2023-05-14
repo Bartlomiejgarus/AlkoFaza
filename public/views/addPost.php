@@ -25,11 +25,25 @@
             </ul>
         </nav>
         <main>
-            <section class="posts">
-                <div id="project-1">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span>Long island iced tea</span>
-                </div>
+            <section class="addNewPost">
+                <h1>UPLOAD</h1>
+                <form action="addNewPost" method="POST" ENCTYPE="multipart/form-data">
+                    <div class="messages">
+                        <?php
+                            if(isset($messages)){
+                                foreach($messages as $message) {
+                                    echo $message;
+                                }
+                            }
+                        ?>
+                    </div>
+                    <input name="title" type="text" placeholder="title">
+                    <textarea name="ingredients" rows=5 placeholder="ingredients"></textarea>
+                    <textarea name="description" rows=5 placeholder="description"></textarea>
+
+                    <input type="file" name="file"/><br/>
+                    <button type="submit">send</button>
+                </form>
             </section>
             <header>
                 <div class="search-bar">
