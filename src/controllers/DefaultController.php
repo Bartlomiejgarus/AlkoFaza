@@ -18,4 +18,19 @@ class DefaultController extends AppController {
     {
         $this->render('addPost');
     }
+
+    public function editPost()
+    {
+        $this->render('editPost');
+    }
+
+    public function showPost()
+    {
+        $this->render('showPost');
+    }
+
+    public function users()
+    {
+        $this->render('users');
+    }
 }
