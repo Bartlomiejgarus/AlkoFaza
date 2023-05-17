@@ -2,6 +2,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/stylePosts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>posts</title>
 </head> 
 
@@ -26,9 +29,33 @@
         </nav>
         <main>
             <section class="posts">
-                <div id="project-1">
+                <div class="post">
                     <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span>Long island iced tea</span>
+                    <span class="postText">Long island iced tea</span>
+                </div>
+                <div class="post">
+                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <span class="postText">Long island iced tea</span>
+                </div>
+                <div class="post">
+                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <span class="postText">Long island iced tea</span>
+                </div>
+                <div class="post">
+                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <span class="postText">Long island iced tea</span>
+                </div>
+                <div class="post">
+                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <span class="postText">Long island iced tea</span>
+                </div>
+                <div class="post">
+                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <span class="postText">Long island iced tea</span>
+                </div>
+                <div class="post">
+                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <span class="postText">Long island iced tea</span>
                 </div>
             </section>
             <header>

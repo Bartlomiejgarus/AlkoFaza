@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/stylePosts.css">
+    <link rel="stylesheet" type="text/css" href="public/css/addPost.css">
     <title>posts</title>
 </head> 
 
@@ -37,24 +37,15 @@
                             }
                         ?>
                     </div>
-                    <input name="title" type="text" placeholder="title">
-                    <textarea name="ingredients" rows=5 placeholder="ingredients"></textarea>
-                    <textarea name="description" rows=5 placeholder="description"></textarea>
-
+                    <input name="title" type="text" placeholder="Title">
+                    <div>
+                        <textarea class="textarea" name="ingredients" rows=5 placeholder="Ingredients"></textarea>
+                        <textarea class="textarea" name="description" rows=5 placeholder="Description"></textarea>
+                    </div>
                     <input type="file" name="file"/><br/>
-                    <button type="submit">send</button>
+                    <button class="submitButton" type="submit">send</button>
                 </form>
             </section>
-            <header>
-                <div class="search-bar">
-                    <form>
-                        <input placeholder="search">
-                    </form>
-                </div>
-                <button class="add">
-                    ADD
-                </button>
-            </header>
         </main>
     </div>
 </body>
