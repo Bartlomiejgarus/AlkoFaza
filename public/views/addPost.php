@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mainStyles.css">
     <link rel="stylesheet" type="text/css" href="public/css/addPost.css">
     <title>posts</title>
 </head> 
