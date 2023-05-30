@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mainStyles.css">
     <link rel="stylesheet" type="text/css" href="public/css/stylePosts.css">
     <title>posts</title>
 </head> 
@@ -38,7 +38,7 @@
             <header>
                 <div class="search-bar">
                     <form>
-                        <input placeholder="search">
+                        <input placeholder="Search">
                     </form>
                 </div>
                 <button class="add">

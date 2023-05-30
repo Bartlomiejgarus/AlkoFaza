@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mainStyles.css">
     <link rel="stylesheet" type="text/css" href="public/css/stylePosts.css">
     <title>posts</title>
 </head> 
@@ -16,7 +16,7 @@
                 </li>
                 <li>    
                     <i class="fas"></i>
-                    <a href="#" class="button"> Users</a>
+                    <a href="#" class="button">Users</a>
                 </li>
                 <li>
                     <i class="fas"></i>
@@ -47,12 +47,10 @@
             <header>
                 <div class="search-bar">
                     <form>
-                        <input placeholder="search">
+                        <input placeholder="Search">
                     </form>
                 </div>
-                <button class="add">
-                    ADD
-                </button>
+                <button class="add">ADD</button>
             </header>
         </main>
     </div>
