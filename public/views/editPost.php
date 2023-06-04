@@ -39,8 +39,9 @@
                     </div>
                     <img src="public/uploads/long-island-iced-tea.jpg">
                     <input name="title" type="text" placeholder="title">
-                    <textarea name="ingredients" rows=5 placeholder="ingredients"></textarea>
-                    <textarea name="description" rows=5 placeholder="description"></textarea>
+                    <textarea name="ingredients" rows=5 placeholder="Ingredients"></textarea>
+                    <textarea name="description" rows=5 placeholder="Description"></textarea>
+                    <textarea name="howToDo" rows=5 placeholder="HowToDo"></textarea>
                     <button type="submit">send</button>
                 </form>
             </section>
