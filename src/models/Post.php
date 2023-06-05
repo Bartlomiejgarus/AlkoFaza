@@ -4,13 +4,15 @@ class Post {
     private $title;
     private $description;
     private $ingredients;
+    private $howToDo;
     private $image;
 
-    public function __construct($title, $description, $ingredients, $image)
+    public function __construct($title, $description, $ingredients, $howToDo, $image)
     {
         $this->title = $title;
         $this->description = $description;
         $this->ingredients = $ingredients;
+        $this->howToDo = $howToDo;
         $this->image = $image;
     }
 
@@ -42,6 +44,16 @@ class Post {
     public function setIngredients($ingredients)
     {
         $this->ingredients = $ingredients;
+    }
+
+    public function getHowToDo()
+    {
+        return $this->howToDo;
+    }
+
+    public function setHowToDo($howToDo)
+    {
+        $this->howToDo = $howToDo;
     }
 
     public function getImage()

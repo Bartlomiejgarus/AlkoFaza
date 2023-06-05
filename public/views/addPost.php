@@ -41,6 +41,7 @@
                     <div>
                         <textarea class="textarea" name="ingredients" rows=5 placeholder="Ingredients"></textarea>
                         <textarea class="textarea" name="description" rows=5 placeholder="Description"></textarea>
+                        <textarea class="textarea" name="howToDo" rows=5 placeholder="How To Do"></textarea>
                     </div>
                     <input type="file" name="file"/><br/>
                     <button class="submitButton" type="submit">send</button>

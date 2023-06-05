@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/Post.php';
+require_once __DIR__.'/../repository/PostRepository.php';
 
 class PostController extends AppController {
 
@@ -10,6 +11,14 @@ class PostController extends AppController {
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $message = [];
+    private $postRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->postRepository = new PostRepository();
+    }
+
 
     public function addNewPost()
     {   
@@ -20,7 +29,8 @@ class PostController extends AppController {
             );
 
             // TODO create new project object and save it in database
-            $post = new Post($_POST['title'], $_POST['description'], $_POST['ingredients'], $_FILES['file']['name']);
+            $post = new Post($_POST['title'], $_POST['description'], $_POST['ingredients'], $_POST['howToDo'], $_FILES['file']['name']);
+            $this->postRepository->addPost($post);
 
             return $this->render('posts', ['messages' => $this->message]);
         }
