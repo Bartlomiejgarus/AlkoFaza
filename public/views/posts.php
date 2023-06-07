@@ -29,34 +29,12 @@
         </nav>
         <main>
             <section class="posts">
+                <?php foreach($posts as $post): ?>
                 <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
+                    <img src="public/uploads/<?=$post->getImage(); ?>">
+                    <span class="postText"><p><?=$post->getTitle(); ?></p></span>
                 </div>
-                <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
-                </div>
-                <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
-                </div>
-                <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
-                </div>
-                <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
-                </div>
-                <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
-                </div>
-                <div class="post">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <span class="postText">Long island iced tea</span>
-                </div>
+                <?php endforeach; ?>
             </section>
             <header>
                 <div class="search-bar">

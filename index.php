@@ -7,7 +7,7 @@ $path = parse_url( $path, PHP_URL_PATH);
 
 //Forms
 Router::get('index', 'DefaultController');
-Router::get('posts', 'DefaultController');
+Router::get('posts', 'PostController');
 Router::get('users', 'DefaultController');
 Router::get('addPost', 'DefaultController');
 Router::get('editPost', 'DefaultController');

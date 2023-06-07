@@ -9,11 +9,6 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
-    public function posts()
-    {
-        $this->render('posts');
-    }
-
     public function addPost()
     {
         $this->render('addPost');

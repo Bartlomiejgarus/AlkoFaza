@@ -19,6 +19,11 @@ class PostController extends AppController {
         $this->postRepository = new PostRepository();
     }
 
+    public function posts()
+    {
+        $posts = $this->postRepository->getPosts();
+        $this->render('posts', ['posts' => $posts]);
+    }
 
     public function addNewPost()
     {   

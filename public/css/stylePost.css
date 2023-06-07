@@ -29,8 +29,8 @@ section {
 }
 
 .post>img {
-    width: 100%;
-    height: 100%;
+    height: 20rem;
+    width: 20rem;
     z-index: 2;
     border-radius: 20px;
 }

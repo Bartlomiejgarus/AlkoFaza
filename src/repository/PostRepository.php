@@ -49,4 +49,28 @@ class PostRepository extends Repository
             $assignedById
         ]);
     }
+
+    public function getPosts(): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM posts
+        ');
+
+        $stmt->execute();
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($posts as $post)
+        {
+            $result[] = new Post(
+                $post['title'],
+                $post['description'],
+                $post['ingredients'],
+                $post['how_to_do'],
+                $post['image']
+            );
+        }
+
+        return $result;
+    }
 }
