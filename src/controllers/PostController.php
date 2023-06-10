@@ -21,7 +21,7 @@ class PostController extends AppController {
 
     public function posts()
     {
-        $this->render('posts', ['posts' => $this->postRepository->getPost()]);
+        $this->render('posts', ['posts' => $this->postRepository->getPosts()]);
     }
 
     public function addNewPost()
@@ -36,7 +36,9 @@ class PostController extends AppController {
             $post = new Post($_POST['title'], $_POST['description'], $_POST['ingredients'], $_POST['howToDo'], $_FILES['file']['name']);
             $this->postRepository->addPost($post);
 
-            return $this->render('posts', ['messages' => $this->message]);
+            return $this->render('posts', [
+                'posts' =>  $this->postRepository->getPosts(),
+                'messages' => $this->message]);
         }
         return $this->render('add-post', ['messages' => $this->message]);
     }
