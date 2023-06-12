@@ -34,4 +34,33 @@ class SecurityController extends AppController {
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/posts");
     }
+
+    public function register()
+    {
+        if (!$this->isPost()) {
+            return $this->render('register');
+        }
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $confirmedPassword = $_POST['confirmedPassword'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $phone = $_POST['phone'];
+        $birthDate = $_POST['birthDate'];
+
+
+        if ($password !== $confirmedPassword) {
+            return $this->render('register', ['messages' => ['Please provide proper password']]);
+        }
+
+        //TODO try to use better hash function
+        $user = new User($email, md5($password), $name, $surname);
+        $user->setPhone($phone);
+        $user->setBirthDate($birthDate);
+
+        $this->userRepository->addUser($user);
+
+        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+    }
 }
