@@ -6,6 +6,11 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController {
 
+    public function __construct()
+    {
+        //$userRepository = new UserRepository();
+    }
+
     public function login()
     {
         $userRepository = new UserRepository();
@@ -37,8 +42,8 @@ class SecurityController extends AppController {
 
     public function registerUser()
     {
-        die("dupa");
-
+        $userRepository = new UserRepository();
+        
         if (!$this->isPost()) {
             return $this->render('register');
         }

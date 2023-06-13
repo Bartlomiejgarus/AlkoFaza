@@ -31,6 +31,7 @@ emailInput.addEventListener('keyup', function () {
     }, 1000);
 });
 
+
 confirmedPasswordInput.addEventListener('keyup', function () {
     setTimeout(function () {
         const condition = arePasswordsSame(
@@ -41,14 +42,17 @@ confirmedPasswordInput.addEventListener('keyup', function () {
     }, 1000);
 });
 
+
 birthDateInput.addEventListener('change', function () {
     setTimeout(function () {
         markValidation(birthDateInput, checkUserAge(birthDateInput.value));
     }, 1000);
 });
 
+/*
 form.addEventListener("submit", e => {
     e.preventDefault();
 
     //TODO check again if form is valid after submitting it
 });
+*/
