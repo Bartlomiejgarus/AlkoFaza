@@ -35,8 +35,10 @@ class SecurityController extends AppController {
         header("Location: {$url}/posts");
     }
 
-    public function register()
+    public function registerUser()
     {
+        die("dupa");
+
         if (!$this->isPost()) {
             return $this->render('register');
         }

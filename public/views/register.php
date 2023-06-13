@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/mainStyles.css">
+    <link rel="stylesheet" type="text/css" href="public/css/allStyles.css">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>REGISTER</title>
 </head>
@@ -12,7 +12,7 @@
         <img src="public/img/logo.svg">
     </div>
     <div class="login-container">
-        <form class="register" action="register" method="POST">
+        <form class="register" action="registerUser" method="post">
             <div class="messages">
                 <?php
                 if(isset($messages)){
@@ -29,7 +29,7 @@
             <input name="surname" type="text" placeholder="surname">
             <input name="phone" type="text" placeholder="phone">
             <input name="birthDate" type="date">
-            <button class="register" type="submit">REGISTER</button>
+            <button type="submit">REGISTER</button>
         </form>
     </div>
 </div>
