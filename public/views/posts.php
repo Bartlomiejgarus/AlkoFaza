@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/mainStyles.css">
+    <link rel="stylesheet" type="text/css" href="public/css/allStyles.css">
     <link rel="stylesheet" type="text/css" href="public/css/stylePost.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

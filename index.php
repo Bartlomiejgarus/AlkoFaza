@@ -13,8 +13,9 @@ Router::get('users', 'DefaultController');
 Router::get('addPost', 'DefaultController');
 Router::get('editPost', 'DefaultController');
 Router::get('showPost', 'DefaultController');
+Router::get('register', 'DefaultController');
 
-Router::post('register', 'SecurityController');
+Router::post('registerUser', 'SecurityController');
 Router::post('login', 'SecurityController');
 Router::post('addNewPost', 'PostController');
 

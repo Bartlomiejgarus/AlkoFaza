@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/mainStyles.css">
+    <link rel="stylesheet" type="text/css" href="public/css/allStyles.css">
     <title>LOGIN PAGE</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
                 <input class="email" name="email" type="text" placeholder="email@mail.com">
                 <input class="password" name="password" type="password" placeholder="password">
                 <button class="continue" type="submit">CONTINUE</button>
-                <button class="register">REGISTER</button>
+                <button class="register-button">REGISTER</button>
             </form>
         </div>
     </div>

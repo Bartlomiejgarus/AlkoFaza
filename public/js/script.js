@@ -33,7 +33,7 @@ emailInput.addEventListener('keyup', function () {
 
 confirmedPasswordInput.addEventListener('keyup', function () {
     setTimeout(function () {
-        const condition = !arePasswordsSame(
+        const condition = arePasswordsSame(
             confirmedPasswordInput.previousElementSibling.value,
             confirmedPasswordInput.value
         );
@@ -41,9 +41,9 @@ confirmedPasswordInput.addEventListener('keyup', function () {
     }, 1000);
 });
 
-birthDateInput.addEventListener('keyup', function () {
+birthDateInput.addEventListener('change', function () {
     setTimeout(function () {
-        markValidation(emailInput, checkUserAge(birthDateInput.value));
+        markValidation(birthDateInput, checkUserAge(birthDateInput.value));
     }, 1000);
 });
 
