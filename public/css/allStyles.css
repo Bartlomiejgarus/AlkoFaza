@@ -74,9 +74,8 @@ input {
     background: #D62828;
 }
 
-.register
-{
-    background: #888888;
+input{
+    background: white;
 }
 
 @media only screen and (max-device-width: 420px) {
@@ -136,6 +135,13 @@ a {
 
 li i {
     font-size: 1.5em;   
+}
+
+.no-valid{
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }
 
 .button {   
