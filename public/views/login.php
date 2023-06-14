@@ -22,7 +22,9 @@
                     <input class="email" name="email" type="text" placeholder="email@mail.com">
                     <input class="password" name="password" type="password" placeholder="password">
                     <button class="continue" type="submit">CONTINUE</button>
-                    <button class="register-button">REGISTER</button>
+            </form>
+            <form class="login" action="register">
+                <button class="register-button">REGISTER</button>
             </form>
         </div>
     </div>

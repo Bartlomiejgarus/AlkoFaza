@@ -31,8 +31,6 @@ class UserRepository extends Repository
 
     public function addUser(User $user)
     {
-        var_dump($user);
-
         $stmt = $this->database->connect()->prepare('
             INSERT INTO users_details (name, surname, phone, birth_date)
             VALUES (?, ?, ?, ?)

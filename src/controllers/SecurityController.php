@@ -8,6 +8,7 @@ class SecurityController extends AppController {
 
     public function __construct()
     {
+        parent::__construct();
         //$userRepository = new UserRepository();
     }
 
@@ -32,7 +33,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
@@ -43,7 +44,7 @@ class SecurityController extends AppController {
     public function registerUser()
     {
         $userRepository = new UserRepository();
-        
+
         if (!$this->isPost()) {
             return $this->render('register');
         }
@@ -61,12 +62,15 @@ class SecurityController extends AppController {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        //TODO try to use better hash function
-        $user = new User($email, md5($password), $name, $surname);
+
+        $hashpassword = password_hash($password, PASSWORD_BCRYPT);
+
+        $user = new User($email, $hashpassword, $name, $surname);
+
         $user->setPhone($phone);
         $user->setBirthDate($birthDate);
 
-        $this->userRepository->addUser($user);
+        $userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
