@@ -17,6 +17,7 @@ class SecurityController extends AppController {
         $userRepository = new UserRepository();
 
         if (!$this->isPost()) {
+            $this->DeleteCokkies();
             return $this->render('login');
         }
 
@@ -38,7 +39,25 @@ class SecurityController extends AppController {
         }
 
         $url = "http://$_SERVER[HTTP_HOST]";
+        $this->SaveCokkies($password, $user);
         header("Location: {$url}/posts");
+    }
+
+    public function DeleteCokkies()
+    {
+        setcookie("email");
+        setcookie("password");
+        setcookie("name");
+        setcookie("surname");
+    }
+
+    public function SaveCokkies($password, $user)
+    {
+        $time = time() + 3600;
+        setcookie("email", $user->getEmail(), $time, "/");
+        setcookie("password", $password, $time, "/");
+        setcookie("name", $user->getName(), $time, "/");
+        setcookie("surname", $user->getSurname(), $time, "/");
     }
 
     public function register()

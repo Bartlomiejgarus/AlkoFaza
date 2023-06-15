@@ -15,17 +15,25 @@
             <ul>
                 <li>
                     <form  action="posts" method="GET">
-                        <button class="button" a href="#">Posts</a>
+                        <button class="button" a href="#">Posts</button>
                     </form>
                 </li>
                 <li>
                     <form  action="users" method="GET">
-                        <button class="button" a href="#"> Users</a>
+                        <button class="button" a href="#"> Users</button>
                     </form>
                 </li>
                 <li>
-                    <form  action="login" method="GET">
-                        <button class="button-logout" href="#">Log out</a>
+                    <form action="login" method="GET">
+                        <button class="button-logout" href="#">
+                        <?php
+                        if (isset($_COOKIE['email']) && !empty($_COOKIE['email'])) {
+                            echo "Log out";
+                        } else {
+                           echo "Log in";
+                        }
+                        ?>
+                        </button>
                     </form>
                 </li>
             </ul>
@@ -33,10 +41,10 @@
         <main>
             <section class="posts">
                 <?php foreach($posts as $post): ?>
-                <div class="post">
-                    <img src="public/uploads/<?=$post->getImage(); ?>">
+                <form class="post" action="showPost" method="GET">
+                    <input type="image" src="public/uploads/<?=$post->getImage(); ?>" class="imagepostimput" value="Submit"/>
                     <span class="postText"><p><?=$post->getTitle(); ?></p></span>
-                </div>
+                </form>
                 <?php endforeach; ?>
             </section>
             <header>

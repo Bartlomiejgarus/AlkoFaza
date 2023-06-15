@@ -12,17 +12,25 @@ s<!DOCTYPE html>
             <ul>
                 <li>
                     <form  action="posts" method="GET">
-                        <button class="button" a href="#">Posts</a>
+                        <button class="button" a href="#">Posts</button>
                     </form>
                 </li>
                 <li>
                     <form  action="users" method="GET">
-                        <button class="button" a href="#"> Users</a>
+                        <button class="button" a href="#"> Users</button>
                     </form>
                 </li>
                 <li>
-                    <form  action="login" method="GET">
-                        <button class="button-logout" href="#">Log out</a>
+                    <form action="login" method="GET">
+                        <button class="button-logout" href="#">
+                        <?php
+                        if (isset($_COOKIE['email']) && !empty($_COOKIE['email'])) {
+                            echo "Log out";
+                        } else {
+                           echo "Log in";
+                        }
+                        ?>
+                        </button>
                     </form>
                 </li>
             </ul>
