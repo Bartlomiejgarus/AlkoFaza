@@ -17,7 +17,7 @@
                     <i class="fas"></i>
                     <a href="#" class="button">Posts</a>
                 </li>
-                <li>    
+                <li>
                     <i class="fas"></i>
                     <a href="#" class="button"> Users</a>
                 </li>
@@ -42,9 +42,9 @@
                         <input placeholder="search">
                     </form>
                 </div>
-                <button class="add">
-                    ADD
-                </button>
+                <form  action="addPost" method="GET"">
+                    <button class="add">ADD</button>
+                </form>
             </header>
         </main>
     </div>

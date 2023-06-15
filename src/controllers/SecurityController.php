@@ -41,7 +41,7 @@ class SecurityController extends AppController {
         header("Location: {$url}/posts");
     }
 
-    public function registerUser()
+    public function register()
     {
         $userRepository = new UserRepository();
 
