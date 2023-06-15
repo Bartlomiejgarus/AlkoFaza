@@ -14,16 +14,19 @@
             <img src="public/img/logo.svg">
             <ul>
                 <li>
-                    <i class="fas"></i>
-                    <a href="#" class="button">Posts</a>
+                    <form  action="posts" method="GET">
+                        <button class="button" a href="#">Posts</a>
+                    </form>
                 </li>
                 <li>
-                    <i class="fas"></i>
-                    <a href="#" class="button"> Users</a>
+                    <form  action="users" method="GET">
+                        <button class="button" a href="#"> Users</a>
+                    </form>
                 </li>
                 <li>
-                    <i class="fas"></i>
-                    <a href="#" class="button-logout">Log out</a>
+                    <form  action="login" method="GET">
+                        <button class="button-logout" href="#">Log out</a>
+                    </form>
                 </li>
             </ul>
         </nav>
@@ -42,7 +45,7 @@
                         <input placeholder="search">
                     </form>
                 </div>
-                <form  action="addPost" method="GET"">
+                <form  action="addPost" method="GET">
                     <button class="add">ADD</button>
                 </form>
             </header>

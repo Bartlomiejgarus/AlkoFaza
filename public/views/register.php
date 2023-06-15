@@ -8,7 +8,9 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="public/img/logo.svg">
+            <form action="posts" method="GET">
+                <input type="image" src="public/img/logo.svg" alt="Logo" class="logoimput" value="Submit"/>
+            </form>
         </div>
         <div class="login-container">
             <form class="login" action="register" method="POST">

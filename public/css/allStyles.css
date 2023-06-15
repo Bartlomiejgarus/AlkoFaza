@@ -133,8 +133,10 @@ a {
     line-height: 2em;
 }
 
-li i {
-    font-size: 1.5em;   
+.logoimput{
+    all: unset;
+    width: 60%;
+    margin: 2em auto;
 }
 
 .no-valid{
@@ -152,7 +154,7 @@ li i {
     letter-spacing: 0.72px;
     color: black;
     padding: 0.2rem;
-    width: 75%;
+    width: 85%;
 }  
 
 
@@ -164,7 +166,7 @@ li i {
     letter-spacing: 0.72px;
     color: black;
     padding: 0.2rem;
-    width: 75%;
+    width: 85%;
 }
 
 ul {
@@ -183,12 +185,6 @@ ul {
 }
 
 li {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    color: white;
     margin-bottom: 1em;
     width: 100%;
 }
