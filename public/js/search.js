@@ -33,13 +33,14 @@ function createPost(post) {
     const template = document.querySelector("#post-template");
 
     const clone = template.content.cloneNode(true);
-    const div = clone.querySelector("div");
-
-    div.id = post.id;
+    const form = clone.querySelector("form");
+    form.id = post.id;
     const image = clone.querySelector("input");
     image.src = `/public/uploads/${post.image}`;
     const title = clone.querySelector("span");
     title.innerHTML = post.title;
+    const favorite = clone.querySelector(".heart-number");
+    favorite.innerHTML = post.favorite;
 
     postContainer.appendChild(clone);
 }

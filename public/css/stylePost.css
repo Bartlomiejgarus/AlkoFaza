@@ -70,6 +70,7 @@ section {
 }
 
 .heart-button{
+    all: unset;
     background: transparent;
     border: none;
     outline: none;

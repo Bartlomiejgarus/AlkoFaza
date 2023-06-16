@@ -6,14 +6,18 @@ class Post {
     private $ingredients;
     private $howToDo;
     private $image;
+    private $favorite;
+    private $id;
 
-    public function __construct($title, $description, $ingredients, $howToDo, $image)
+    public function __construct($title, $description, $ingredients, $howToDo, $image, $favorite = 0, $id = null)
     {
         $this->title = $title;
         $this->description = $description;
         $this->ingredients = $ingredients;
         $this->howToDo = $howToDo;
         $this->image = $image;
+        $this->favorite = $favorite;
+        $this->id = $id;
     }
 
     public function getTitle()
@@ -64,5 +68,25 @@ class Post {
     public function setImage($image)
     {
         $this->image = $image;
+    }
+
+    public function getFavorite()
+    {
+        return $this->favorite;
+    }
+
+    public function setFavorite($favorite)
+    {
+        $this->favorite = $favorite;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 }

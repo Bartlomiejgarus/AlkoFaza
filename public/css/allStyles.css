@@ -141,7 +141,7 @@ a {
 
 .imagepostimput{
     offset: none;
-    width: 80%;
+    width: 100%;
     margin: 2em auto;
     z-index: 2;
     border-radius: 20px;

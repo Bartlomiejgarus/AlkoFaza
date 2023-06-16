@@ -72,7 +72,9 @@ class PostRepository extends Repository
                 $post['description'],
                 $post['ingredients'],
                 $post['how_to_do'],
-                $post['image']
+                $post['image'],
+                $post['favorite'],
+                $post['id']
             );
         }
 
