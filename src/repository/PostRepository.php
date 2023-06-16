@@ -59,7 +59,7 @@ class PostRepository extends Repository
     {
         $result = [];
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM posts
+            SELECT * FROM posts ORDER BY id
         ');
 
         $stmt->execute();
@@ -92,5 +92,14 @@ class PostRepository extends Repository
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function favorite(int $id) {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE posts SET favorite = favorite + 1 WHERE id = :id
+         ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
     }
 }

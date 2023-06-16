@@ -14,6 +14,7 @@ Router::get('addPost', 'DefaultController');
 Router::get('editPost', 'DefaultController');
 Router::get('showPost', 'DefaultController');
 Router::get('register', 'DefaultController');
+Router::get('favorite', 'PostController');
 
 Router::post('register', 'SecurityController');
 Router::post('login', 'SecurityController');

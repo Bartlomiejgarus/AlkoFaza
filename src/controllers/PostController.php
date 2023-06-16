@@ -58,6 +58,11 @@ class PostController extends AppController {
         }
     }
 
+    public function favorite(int $id) {
+        $this->postRepository->favorite($id);
+        http_response_code(200);
+    }
+
     private function validate(array $file): bool
     {
         if ($file['size'] > self::MAX_FILE_SIZE) {
