@@ -216,6 +216,11 @@ header {
     align-items: center;
     padding: 1em 2em;
     border-bottom: 1px solid gray;
+    position: fixed;
+    width: 75%;
+    bottom: 0;
+    background: white;
+    z-index: 99;
 }
 
 .add {

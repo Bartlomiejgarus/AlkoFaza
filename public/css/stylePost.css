@@ -50,6 +50,27 @@ section {
     bottom: -15%;
 }
 
+.heart-container{
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.heart-button{
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    height: 30px;
+}
+
+.heart-button > svg {
+    width: 18px;
+}
+
+
 .posts>div>div {
     height: 50%;
     margin: 1em;
