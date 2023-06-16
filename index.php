@@ -18,5 +18,6 @@ Router::get('register', 'DefaultController');
 Router::post('register', 'SecurityController');
 Router::post('login', 'SecurityController');
 Router::post('addNewPost', 'PostController');
+Router::post('search', 'PostController');
 
 Router::run($path);

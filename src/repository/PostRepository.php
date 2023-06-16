@@ -78,4 +78,17 @@ class PostRepository extends Repository
 
         return $result;
     }
+
+    public function getPostByTitle(string $searchString)
+    {
+        $searchString = '%' . strtoupper($searchString) . '%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM posts WHERE UPPER(title) LIKE :search OR UPPER(description) LIKE :search
+        ');
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
