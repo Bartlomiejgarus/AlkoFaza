@@ -37,7 +37,12 @@ class PostRepository extends Repository
         ');
 
         //TODO you should get this value from logged user session
-        $assignedById = 1;
+
+        $userRepository = new UserRepository();
+        if (isset($_COOKIE['email']))
+            $assignedById = $userRepository->getUserId($_COOKIE['email']);
+        else
+            return;
 
         $stmt->execute([
             $Post->getTitle(),
