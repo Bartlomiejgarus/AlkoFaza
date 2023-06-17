@@ -21,11 +21,6 @@ class DefaultController extends AppController {
             $this->render('editPost');
     }
 
-    public function showPost()
-    {
-        $this->render('showPost');
-    }
-
     public function users()
     {
         $this->render('users');

@@ -44,7 +44,8 @@
         <main>
             <section class="posts">
                 <?php foreach ($posts as $post): ?>
-                    <form class="post" action="showPost" method="GET" id = "<?= $post->getId(); ?>">
+                    <form class="post" action="showPost?id=<?= $post->getId(); ?>" method="GET" id = "<?= $post->getId(); ?>">
+                            <input type="hidden" name="id" value="<?= $post->getId(); ?>">
                             <?php $imagePath = 'public/uploads/' . $post->getImage(); ?>
                             <?php if (file_exists($imagePath)): ?>
                                 <input type="image" src="<?= $imagePath ?>" class="imagepostimput" value="Submit"/>

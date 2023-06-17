@@ -37,22 +37,22 @@
         </nav>
         <main>
             <section>
-                <h1>Long Island Iced Tea</h1>
+                <h1><p><?php $post->getTitle(); ?></p></h1>
                 <form class="showPost" action="showPost" method="POST" enctype="multipart/form-data">
                     <div>
-                        <img class="img-post" src="public/uploads/long-island-iced-tea.jpg">
+                        <img class="img-post" src="public/uploads/<?= $post->getImage(); ?>">
                     </div>
                     <div class="postDescription">
                         <p class="postHeader">Description</p>
-                        <span class="postText" name="description">The strongest drink in the world!</span>
+                        <span class="postText" name="description"><?= $post->getDescription(); ?></span>
                     </div>
                     <div class="postIngredients">
                         <p class="postHeader">Ingredients</p>
-                        <span class="postText" name="ingredients">vodka, rum, gin, tequila, triple sec, sweet, cola, lime</span>
+                        <span class="postText" name="ingredients"><?= $post->getIngredients(); ?></span>
                     </div>
                     <div class="postHowToDo">
                         <p class="postHeader" >How to do</p>
-                        <span class="postText" name="how_to_do">Mix all with ice</span>
+                        <span class="postText" name="how_to_do"><?= $post->getHowToDo(); ?></span>
                     </div>
                 </form>
             </section>

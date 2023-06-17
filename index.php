@@ -12,7 +12,7 @@ Router::get('posts', 'PostController');
 Router::get('users', 'DefaultController');
 Router::get('addPost', 'DefaultController');
 Router::get('editPost', 'DefaultController');
-Router::get('showPost', 'DefaultController');
+Router::get('showPost', 'PostController');
 Router::get('register', 'DefaultController');
 Router::get('favorite', 'PostController');
 

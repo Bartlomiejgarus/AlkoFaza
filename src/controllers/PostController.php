@@ -25,6 +25,16 @@ class PostController extends AppController {
         $this->render('posts', ['posts' => $this->postRepository->getPosts()]);
     }
 
+    public function showPost()
+    {
+        var_dump($_GET['id']);
+        if (isset($_GET['id'])) {
+            $postId = $_GET['id'];
+        }
+        $project = $this->postRepository->getPost($postId);
+        $this->render('showPost', ['post' => $project]);
+    }
+
     public function addNewPost()
     {   
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
