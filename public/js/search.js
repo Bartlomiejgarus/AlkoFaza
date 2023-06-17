@@ -37,6 +37,8 @@ function createPost(post) {
     form.id = post.id;
     const image = clone.querySelector("input");
     image.src = `/public/uploads/${post.image}`;
+    const hideimput = clone.querySelector(".hideimput");
+    hideimput.value = post.id;
     const title = clone.querySelector("span");
     title.innerHTML = post.title;
     const favorite = clone.querySelector(".heart-number");

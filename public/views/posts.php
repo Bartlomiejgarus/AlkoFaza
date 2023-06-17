@@ -45,13 +45,13 @@
             <section class="posts">
                 <?php foreach ($posts as $post): ?>
                     <form class="post" action="showPost?id=<?= $post->getId(); ?>" method="GET" id = "<?= $post->getId(); ?>">
-                            <input type="hidden" name="id" value="<?= $post->getId(); ?>">
                             <?php $imagePath = 'public/uploads/' . $post->getImage(); ?>
                             <?php if (file_exists($imagePath)): ?>
                                 <input type="image" src="<?= $imagePath ?>" class="imagepostimput" value="Submit"/>
                             <?php else: ?>
                                 <input type="image" src="public/img/logo.svg" class="imagepostimput" value="Submit"/>
                             <?php endif; ?>
+                            <input class="hideimput" type="hidden" name="id" value="<?= $post->getId(); ?>">
                             <span class="postText"><p><?= $post->getTitle(); ?></p></span>
                             <div class="heart-container">
                                 <button type="button" class="heart-button">
@@ -79,6 +79,7 @@
 <template id="post-template">
     <form class="post" action="showPost" method="GET" id = "">
             <input type="image" src="" class="imagepostimput" value="Submit"/>
+            <input class="hideimput" type="hidden" name="id" value="">
             <span class="postText"><p>title</p></span>
             <div class="heart-container">
                 <button type="button" class="heart-button">

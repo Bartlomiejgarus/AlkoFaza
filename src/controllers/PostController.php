@@ -27,10 +27,12 @@ class PostController extends AppController {
 
     public function showPost()
     {
-        var_dump($_GET['id']);
         if (isset($_GET['id'])) {
             $postId = $_GET['id'];
+        }else {
+            $postId = 1;
         }
+
         $project = $this->postRepository->getPost($postId);
         $this->render('showPost', ['post' => $project]);
     }
