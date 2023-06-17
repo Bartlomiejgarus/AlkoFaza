@@ -36,14 +36,24 @@
             </ul>
         </nav>
         <main>
-            <section class="showPost">
-                <h1>UPLOAD</h1>
-                <form action="showPost" method="POST" ENCTYPE="multipart/form-data">
-                    <img src="public/uploads/long-island-iced-tea.jpg">
-                    <input name="title" type="text" placeholder="title">
-                    <textarea name="ingredients" rows=5 placeholder="ingredients"></textarea>
-                    <textarea name="description" rows=5 placeholder="description"></textarea>
-                    <button type="submit">send</button>
+            <section>
+                <h1>Long Island Iced Tea</h1>
+                <form class="showPost" action="showPost" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <img class="img-post" src="public/uploads/long-island-iced-tea.jpg">
+                    </div>
+                    <div class="postDescription">
+                        <p class="postHeader">Description</p>
+                        <span class="postText" name="description">The strongest drink in the world!</span>
+                    </div>
+                    <div class="postIngredients">
+                        <p class="postHeader">Ingredients</p>
+                        <span class="postText" name="ingredients">vodka, rum, gin, tequila, triple sec, sweet, cola, lime</span>
+                    </div>
+                    <div class="postHowToDo">
+                        <p class="postHeader" >How to do</p>
+                        <span class="postText" name="how_to_do">Mix all with ice</span>
+                    </div>
                 </form>
             </section>
             <header>

@@ -48,7 +48,7 @@
                             }
                         ?>
                     </div>
-                    <img src="public/uploads/long-island-iced-tea.jpg">
+                    <img class="img-post" src="public/uploads/long-island-iced-tea.jpg">
                     <input name="title" type="text" placeholder="title">
                     <textarea name="ingredients" rows=5 placeholder="Ingredients"></textarea>
                     <textarea name="description" rows=5 placeholder="Description"></textarea>
